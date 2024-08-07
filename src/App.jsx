@@ -8,11 +8,14 @@ import Featured from './Components/Featured'
 import Cards from './Components/Cards'
 import Footer from './Components/Footer'
 import LocomotiveScroll from 'locomotive-scroll';
+import {HashRouter} from "react-router-dom"
+
 function page() {
 
   const locomotiveScroll = new LocomotiveScroll();
   
   return (
+    <HashRouter>
     <div className='w-full min-h-screen bg-[#F1F1F1]'>
       <Navbar />
       <Landingpage />
@@ -23,6 +26,7 @@ function page() {
       <Cards />
       <Footer />
     </div>
+    </HashRouter>
   )
 }
 
