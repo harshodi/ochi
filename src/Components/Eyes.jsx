@@ -6,7 +6,7 @@ function Eyes() {
   useEffect(() => {
     const handleMouseMove = (e) => {
       let mouseX = e.clientX;
-      let mouseY = e.clientY; // Corrected typo here
+      let mouseY = e.clientY;
 
       let deltaX = mouseX - window.innerWidth / 2;
       let deltaY = mouseY - window.innerHeight / 2;
@@ -18,9 +18,9 @@ function Eyes() {
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove); // Clean up event listener
+      window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
   return (
     <div className="eyes w-full h-screen overflow-hidden">
